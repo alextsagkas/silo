@@ -21,6 +21,11 @@
 #include "macros.h"
 #include "small_vector.h"
 
+// declared here so util::format_list() can find it; defined below
+template <typename A, typename B>
+inline std::ostream &
+operator<<(std::ostream &o, const std::pair<A, B> &p);
+
 namespace util {
 
 // padded, aligned primitives
